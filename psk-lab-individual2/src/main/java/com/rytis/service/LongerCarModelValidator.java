@@ -12,6 +12,6 @@ public class LongerCarModelValidator implements ICarModelValidator {
     @Override
     @Logger
     public boolean isCarModelValid(String name) {
-        return name.length() > 15;
+        return name.length() < 11;
     }
 }

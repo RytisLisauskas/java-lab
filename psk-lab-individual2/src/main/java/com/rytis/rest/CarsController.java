@@ -84,8 +84,8 @@ public class CarsController {
             if (isNull(existingCar)) {
                 return status(NOT_FOUND).build();
             }
-            boolean nameValid = carModelValidator.isCarModelValid(carDto.getCarModel());
-            boolean nameValid2 = validator.isCarModelValid(carDto.getCarModel());
+            boolean validation1 = carModelValidator.isCarModelValid(carDto.getCarModel());
+            boolean validation2 = validator.isCarModelValid(carDto.getCarModel());
 
                 existingCar.setCarModel(carDto.getCarModel());
                 existingCar.setLicenseNumber(idFixer.RefactorCarID(carDto.getLicenseNumber()));

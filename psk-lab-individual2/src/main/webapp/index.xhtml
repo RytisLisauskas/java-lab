@@ -10,6 +10,9 @@
     <ol>
         <ui:repeat value="#{autoservices.allAutoservices}" var="autoservice">
             <li><h:link value="#{autoservice.title}" outcome="/cars?autoserviceId=#{autoservice.id}"/></li>
+            <h:outputLabel> Amount of cars: </h:outputLabel>
+            <h:outputLabel value="${autoservice.cars.size()}"/>
+            <br/>
             <span>Mechanics:</span>
 
             <ul>
@@ -39,8 +42,6 @@
             </ul>
         </ui:repeat>
     </ol>
-
-    <h:link outcome="myBatis/autoservices" value="MyBatis implementation"/>
 
 </h:body>
 </html>
